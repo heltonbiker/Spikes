@@ -1,0 +1,19 @@
+﻿
+Quando roda o programa, vai pra tela de exame, contendo:
+    - "Esta é a tela de exame, e o botão abaixo é o botão pra iniciar a coleta"
+    - Botão que inicia a coleta;
+
+
+Quando clica em "iniciar coleta", o esperado é que aconteça o seguinte:
+    - vai pra tela em que aparece a imagem da câmara, com dois sliders;
+    - abre a janela em que o padrão é projetado;
+    - quando mexe nos sliders, muda a projeção;
+    - quando dá OK, salva a imagem da câmara.
+
+
+Quando abre o Gerenciador de Coleta, três views estão ativas:
+    - Os sliders que se referem à classe Projeção;
+    - O coiso da câmera que funciona de forma autônoma;
+    - A janela de projeção, que projeta o objeto Projeção;
+
+    - Então o objeto projeção tem que existir no escopo do Gerenciador de Coleta.

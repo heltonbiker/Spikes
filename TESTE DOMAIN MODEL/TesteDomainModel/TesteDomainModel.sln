@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteDomainModel", "TesteDomainModel\TesteDomainModel.csproj", "{6F4E0BD7-991B-4621-BC50-3B8D0ECE4719}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F015C575-87C8-494C-BA48-F1EFAF7853A0}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TesteDomainModel.vsmdi = TesteDomainModel.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = TesteDomainModel.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F4E0BD7-991B-4621-BC50-3B8D0ECE4719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4E0BD7-991B-4621-BC50-3B8D0ECE4719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4E0BD7-991B-4621-BC50-3B8D0ECE4719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4E0BD7-991B-4621-BC50-3B8D0ECE4719}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

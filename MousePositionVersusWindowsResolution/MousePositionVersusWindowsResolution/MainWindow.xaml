@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MousePositionVersusWindowsResolution.MainWindow">
+	<DockPanel>
+		<StackPanel Orientation="Horizontal" VerticalAlignment="Top" DockPanel.Dock="Top">
+			<StackPanel.Resources>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Width" Value="120"/>
+					<Setter Property="FontSize" Value="20"/>
+					<Setter Property="Margin" Value="10"/>
+				</Style>
+			</StackPanel.Resources>
+
+			<TextBlock x:Name="X"/>
+			<TextBlock x:Name="Y"/>
+			<TextBlock x:Name="xnorm"/>
+			<TextBlock x:Name="ynorm"/>
+		</StackPanel>
+		<Grid>
+			<Border x:Name="MouseEventArea" Margin="20" Background="Peru" MouseMove="MouseEventArea_MouseMove" Width="200" Height="200"/>
+		</Grid>
+	</DockPanel>
+</Window>

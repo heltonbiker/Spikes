@@ -1,0 +1,48 @@
+﻿<Window x:Class="RelatorioWpf.RelatorioView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:RelatorioWpf"
+        Title="MainWindow" Background="DarkGray" WindowState="Maximized">
+        
+    
+    <Window.DataContext>
+        <vm:RelatorioViewModel/>
+        
+    </Window.DataContext>
+	<FlowDocumentReader>
+        <FlowDocument Background="GhostWhite" MaxPageWidth="21cm" MaxPageHeight="29.7cm">
+            <BlockUIContainer>
+                
+                <Grid Margin="133,0,-214.97,0" >
+                    <Grid Background="LightGray" Margin="10,10,10,50">
+                        <Label Content="Paciente:" TextElement.FontSize="12" TextElement.Foreground="Gray" TextElement.FontFamily="Helvetica"/>
+                        <TextBlock Text="{Binding Path=Nome}" TextElement.FontFamily="Helvetica" TextElement.Foreground="Blue" TextElement.FontSize="12"  Margin="60,5,0,0" />
+                        <Label Content="CPF:" TextElement.FontSize="12" TextElement.Foreground="Gray" TextElement.FontFamily="Helvetica" Margin="300,0,0,0"/>
+                        <TextBlock Text="{Binding Path=CPF}" FontFamily="Helvetica" TextElement.Foreground="Blue" TextElement.FontSize="12"  Margin="335,5,0,0"/>
+                        <Label Content="Solicitante:" TextElement.FontSize="12" TextElement.Foreground="Gray" TextElement.FontFamily="Helvetica" Margin="0,15,0,0"/>
+                        <TextBlock Text="{Binding Path=Solicitante}" TextElement.FontSize="12" TextElement.FontFamily="Helvetica" TextElement.Foreground="Blue" Margin="65,20,0,0"/>
+                    </Grid>
+                    <Grid Margin="10,50,10,0">
+                        <Label Content="Idade:" TextElement.FontSize="12" TextElement.Foreground="Gray" TextElement.FontFamily="Helvetica"/>
+                        <TextBlock Text="{Binding Path=Idade}" TextElement.FontSize="12"  TextElement.FontFamily="Helvetica" TextElement.Foreground="Blue" Margin="40,5,0,0"/>
+                        <Label Content="Altura:" TextElement.FontSize="12" TextElement.Foreground="Gray" TextElement.FontFamily="Helvetica" Margin="300,0,0,0"/>
+                        <TextBlock Text="{Binding Path=Altura}" TextElement.FontSize="12" TextElement.FontFamily="Helvetica" TextElement.Foreground="Blue" Margin="340,5,0,0"/>
+                        <Label Content="Gênero:" TextElement.FontSize="12" TextElement.Foreground="Gray" TextElement.FontFamily="Helvetica" Margin="0,20,0,0" />
+                        <TextBlock Text="{Binding Path=Genero}" TextElement.FontSize="12" TextElement.FontFamily="Helvetica" TextElement.Foreground="Blue" Margin="55,25,0,0"/>
+                        <Label Content="Peso:" TextElement.FontSize="12" TextElement.Foreground="Gray" TextElement.FontFamily="Helvetica" Margin="300,20,0,0"/>
+                        <TextBlock Text="{Binding Path=Peso}" TextElement.FontSize="12" TextElement.FontFamily="Helvetica" TextElement.Foreground="Blue" Margin="340,25,0,0"/>
+
+                    </Grid>
+
+                </Grid>
+
+            </BlockUIContainer>
+			<BlockUIContainer>
+				
+			</BlockUIContainer>
+            
+        </FlowDocument>
+        
+	</FlowDocumentReader>
+
+</Window>

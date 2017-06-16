@@ -1,0 +1,39 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:IntegracaoColetaVVM.InfraEstrutura"
+	mc:Ignorable="d"    
+	x:Class="IntegracaoColetaVVM.View.MarcadoresView"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+    <UserControl.Resources>
+        <i:BitmapToSource x:Key="BitmapToSource"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.831*"/>
+			<RowDefinition Height="0.169*"/>
+		</Grid.RowDefinitions>
+		<Button Content="Concluir" Grid.Column="1" Margin="27.2,21.12,40,24" Grid.Row="1" Width="100"/>
+		<Viewbox x:Name="ViewboxMarcadores" Stretch="Uniform" MouseMove="Viewbox_MouseMove" MinHeight="400" MinWidth="400">
+            <Canvas Width="768" Height="1024" Background="#FF3F3F3F" ClipToBounds="True">
+				<Image x:Name="ImagemMarcadores" Stretch="Uniform" Source="{Binding ImagemBranca, Converter={StaticResource BitmapToSource}}" HorizontalAlignment="Left" VerticalAlignment="Top">
+					<Image.LayoutTransform>
+						<RotateTransform Angle="-90"/>
+					</Image.LayoutTransform>
+				</Image>
+				<Ellipse x:Name="CursorElipse"
+					Width="50" Height="50"
+					StrokeThickness="7" Stroke="#FF05C200">
+					<Ellipse.RenderTransform>
+						<TranslateTransform X="-25" Y="-25"/>
+					</Ellipse.RenderTransform>
+				</Ellipse>
+			</Canvas>
+		</Viewbox>
+	</Grid>
+</UserControl>

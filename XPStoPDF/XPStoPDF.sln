@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPStoPDF", "XPStoPDF\XPStoPDF.csproj", "{50686eec-f4e3-4a00-a23c-f19e9369b9fc}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50686EEC-F4E3-4A00-A23C-F19E9369B9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50686EEC-F4E3-4A00-A23C-F19E9369B9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50686EEC-F4E3-4A00-A23C-F19E9369B9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50686EEC-F4E3-4A00-A23C-F19E9369B9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

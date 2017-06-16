@@ -1,0 +1,54 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="clr-namespace:ImagePlaceholderColorBar"
+	x:Class="ImagePlaceholderColorBar.MainWindow"
+	x:Name="Window"
+	Title="MainWindow"
+	Width="640" Height="480">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.Resources>
+			
+			<local:ColormapSourceConverter x:Key="ColormapSourceConverter"/>
+			
+			<Style TargetType="Border">
+				<Setter Property="BorderBrush" Value="Black"/>
+				<Setter Property="BorderThickness" Value="1"/>
+			</Style>
+			
+			<DrawingImage x:Key="ImagePlaceholder">
+				<DrawingImage.Drawing>
+					<GeometryDrawing>
+						<GeometryDrawing.Pen>
+							<Pen Brush="LightBlue" Thickness="3"/>
+						</GeometryDrawing.Pen>
+						<GeometryDrawing.Geometry>
+							<PathGeometry Figures="M 0,0 0,1 1,1 1,0 z M 0,0 1,1 M 0,1 1,0">
+								<PathGeometry.Transform>
+									<ScaleTransform ScaleX="0.1" ScaleY="0.1"/>
+								</PathGeometry.Transform>
+							</PathGeometry>
+						</GeometryDrawing.Geometry>
+					</GeometryDrawing>
+				</DrawingImage.Drawing>
+			</DrawingImage>
+			
+		</Grid.Resources>
+		
+		<Border HorizontalAlignment="Left" Margin="43.5,37.5,0,55.5" Width="66">
+			<Image x:Name="ColorbarTall" Source="{Binding Colorbar}" Stretch="Fill"/>
+		</Border>
+		<Border HorizontalAlignment="Left" Margin="175.5,187.5,0,123" Width="118.5">
+			<Image x:Name="ColorbarFlat" Source="{Binding Colorbar}" Stretch="Fill"/>
+		</Border>
+		<!--
+		<Border HorizontalAlignment="Right" Margin="0,49.5,228,43.5" Width="66">
+			<Image x:Name="PlaceholderTall" Stretch="Fill" Source="{StaticResource ImagePlaceholder}"/>
+		</Border>
+		<Border HorizontalAlignment="Right" Margin="0,199.5,43.5,111" Width="118.5">
+			<Image x:Name="PlaceholderFlat" Stretch="Fill" Source="{StaticResource ImagePlaceholder}"/>
+		</Border>
+		-->
+	</Grid>
+</Window>

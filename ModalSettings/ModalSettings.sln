@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModalSettings", "ModalSettings\ModalSettings.csproj", "{b7d862ce-e60c-4838-b9d8-927e8f149aa5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7D862CE-E60C-4838-B9D8-927E8F149AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D862CE-E60C-4838-B9D8-927E8F149AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D862CE-E60C-4838-B9D8-927E8F149AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D862CE-E60C-4838-B9D8-927E8F149AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

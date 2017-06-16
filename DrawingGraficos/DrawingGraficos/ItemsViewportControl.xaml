@@ -1,0 +1,67 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:DrawingGraficos"
+	mc:Ignorable="d"
+	x:Class="DrawingGraficos.ItemsViewportControl"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<ItemsControl>
+		<ItemsControl.Resources>
+				<local:TranslacaoConverter x:Key="TranslacaoConverter"/>
+				<local:EscalaConverter x:Key="EscalaConverter"/>
+				
+				<ScaleTransform x:Key="InverteY"
+					ScaleY="-1"/>
+				
+				<ScaleTransform x:Key="ScaleToFit">
+					<ScaleTransform.ScaleX>
+						<MultiBinding Converter="{StaticResource EscalaConverter}">
+							<Binding ElementName="viewport" Path="ActualWidth"/>
+							<Binding ElementName="viewport" Path="ActualHeight"/>
+							<Binding Path="Limites"/>
+						</MultiBinding>
+					</ScaleTransform.ScaleX>
+					<ScaleTransform.ScaleY>
+						<MultiBinding Converter="{StaticResource EscalaConverter}">
+							<Binding ElementName="viewport" Path="ActualWidth"/>
+							<Binding ElementName="viewport" Path="ActualHeight"/>
+							<Binding Path="Limites"/>
+						</MultiBinding>
+					</ScaleTransform.ScaleY>
+				</ScaleTransform>					
+				
+				<TranslateTransform x:Key="TranslateToFit">
+					<TranslateTransform.X>
+						<MultiBinding Converter="{StaticResource TranslacaoConverter}">
+							<Binding ElementName="viewport" Path="ActualWidth"/>
+							<Binding Path="Limites.Width"/>
+							<Binding Path="Limites.Right"/>						
+						</MultiBinding>
+					</TranslateTransform.X>
+					<TranslateTransform.Y>
+						<MultiBinding Converter="{StaticResource TranslacaoConverter}">
+							<Binding ElementName="viewport" Path="ActualHeight"/>
+							<Binding Path="Limites.Height"/>
+							<Binding Path="Limites.Top"/>
+						</MultiBinding>
+					</TranslateTransform.Y>
+				</TranslateTransform>
+				
+				<TransformGroup x:Key="ViewTransform">
+					<StaticResource ResourceKey="InverteY"/>
+					<StaticResource ResourceKey="ScaleToFit"/>
+					<StaticResource ResourceKey="TranslateToFit"/>				
+				</TransformGroup>
+		</ItemsControl.Resources>
+		<ItemsControl.ItemsPanel>
+			<ItemsPanelTemplate>
+				<Canvas IsItemsHost="True" VerticalAlignment="Bottom" HorizontalAlignment="Left" SnapsToDevicePixels="True" RenderTransform="{StaticResource ViewTransform}"/>
+			</ItemsPanelTemplate>
+		</ItemsControl.ItemsPanel>
+		
+	</ItemsControl>
+</UserControl>

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartidaViewDemo", "PartidaViewDemo.csproj", "{AD1EED91-1DAC-4B86-B615-E12097E91492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioMovi", "..\..\00 GIT\AplicativosDesktopGit\BioMovi\BioMovi.csproj", "{84869D4D-449D-47F5-BE7C-A3BD3EECFB51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioGames.Partidas", "..\..\00 GIT\AplicativosDesktopGit\BioGames.Partidas\BioGames.Partidas.csproj", "{FA4205A4-E6D7-427A-84CC-925595BBF0D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miotec.ModeloDomínio", "..\..\00 GIT\AplicativosDesktopGit\Miotec.ModeloDomínio\Miotec.ModeloDomínio.csproj", "{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plotagem.WPF", "..\..\00 GIT\AplicativosDesktopGit\Plotagem.WPF\Plotagem.WPF.csproj", "{9C5C4C21-15B7-414E-BD0F-98AE7015237A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD1EED91-1DAC-4B86-B615-E12097E91492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1EED91-1DAC-4B86-B615-E12097E91492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1EED91-1DAC-4B86-B615-E12097E91492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1EED91-1DAC-4B86-B615-E12097E91492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84869D4D-449D-47F5-BE7C-A3BD3EECFB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84869D4D-449D-47F5-BE7C-A3BD3EECFB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84869D4D-449D-47F5-BE7C-A3BD3EECFB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84869D4D-449D-47F5-BE7C-A3BD3EECFB51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4205A4-E6D7-427A-84CC-925595BBF0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4205A4-E6D7-427A-84CC-925595BBF0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4205A4-E6D7-427A-84CC-925595BBF0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4205A4-E6D7-427A-84CC-925595BBF0D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5C4C21-15B7-414E-BD0F-98AE7015237A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5C4C21-15B7-414E-BD0F-98AE7015237A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5C4C21-15B7-414E-BD0F-98AE7015237A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5C4C21-15B7-414E-BD0F-98AE7015237A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

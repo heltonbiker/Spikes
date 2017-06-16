@@ -1,0 +1,36 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:TesteMarcadoresView"
+	mc:Ignorable="d"    
+	x:Class="TesteMarcadoresView.MarcadoresView"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+    <UserControl.Resources>
+        <i:BitmapToSource x:Key="BitmapToSource"/>
+    </UserControl.Resources>
+
+    <DockPanel x:Name="LayoutRoot">
+		<Button Content="Concluir" Width="100" Height="30" Margin="0,15" d:LayoutOverrides="Width, Height" DockPanel.Dock="Bottom"/>
+		<Viewbox x:Name="ContainerImagem" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Top"
+					MouseMove="MarcadoresMouseMove" OpacityMask="#FFE4B0B0">
+			<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Viewbox Stretch="Fill" d:LayoutOverrides="Width, Height">
+					<Image x:Name="ImagemMarcadores" Stretch="Uniform" Source="/TesteMarcadoresView;component/white.png" Height="1024.143" Width="768.108" />
+				</Viewbox>
+				<Canvas x:Name="CanvasEventos" ClipToBounds="True">
+					<Border x:Name="CirculoCursor"
+						Width="50" Height="50" BorderBrush="#FF52E72A" BorderThickness="3" CornerRadius="100" ClipToBounds="True">
+						<Border.RenderTransform>
+							<TranslateTransform X="-25" Y="-25"/>
+						</Border.RenderTransform>
+						<Image Source="{Binding Source, ElementName=ImagemMarcadores}" />
+					</Border>
+				</Canvas>
+			</Grid>
+		</Viewbox>
+	</DockPanel>
+</UserControl>

@@ -1,0 +1,63 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:TesteMarcadoresView"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	mc:Ignorable="d"    
+	x:Class="TesteMarcadoresView.MarcadoresView"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<UserControl.Resources>
+		<sys:Double x:Key="escala">5</sys:Double>
+		<sys:Double x:Key="raio">20</sys:Double>
+		<sys:Double x:Key="espessura">0.3</sys:Double>
+		<EllipseGeometry x:Key="geometriacirculo"
+			RadiusX="{StaticResource raio}"
+			RadiusY="{StaticResource raio}"/>
+		<ScaleTransform x:Key="transform" ScaleX="{StaticResource escala}" ScaleY="{StaticResource escala}" />
+	</UserControl.Resources>
+
+
+    <DockPanel x:Name="LayoutRoot">
+		<Button Content="Concluir" Width="100" Height="30" Margin="0,15" d:LayoutOverrides="Width, Height" DockPanel.Dock="Bottom"/>
+		<Grid MouseMove="MarcadoresMouseMove" x:Name="AreaEventos" HorizontalAlignment="Center" ClipToBounds="True" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="Height" VerticalAlignment="Center" MouseLeave="MouseLeave_TornaCirculoInvisivel" MouseEnter="MouseEnter_TornaCirculoVisivel" MouseLeftButtonDown="cliqueDoMouse" MouseLeftButtonUp="descliqueDoMouse">
+			<Grid x:Name="GridImagemOriginal">
+				<Image x:Name="ImagemOriginalMarcadores" Stretch="Uniform" Source="/TesteMarcadoresView;component/white.png" />
+				<ItemsControl x:Name="MarcadoresSelecionados" ItemsSource="{Binding ListaPontos}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseRightButtonDown="MouseDown_ApagaMarcadores">
+					<ItemsControl.ItemContainerStyle>
+						<Style TargetType="{x:Type FrameworkElement}">
+							<Setter Property="Canvas.Left" Value="{Binding X}" />
+							<Setter Property="Canvas.Top" Value="{Binding Y}" />
+						</Style>				
+					</ItemsControl.ItemContainerStyle>
+					<ItemsControl.ItemTemplate>
+						<DataTemplate DataType="Point">
+							<Ellipse Fill="Blue"
+								Width="8"
+								Height="8"
+								Margin="-4,-4,4,4" />
+						</DataTemplate>				
+					</ItemsControl.ItemTemplate>
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<Canvas IsItemsHost="True" />
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+				</ItemsControl>
+			</Grid>
+			<Grid x:Name="AreaZoom">
+				<Image x:Name="ImagemMarcadoresClip"
+					Clip="{StaticResource geometriacirculo}"
+					RenderTransform="{StaticResource transform}"
+					Stretch="Uniform" Source="white.png" Visibility="{Binding Visibility, ElementName=circulo}"/>
+				<Path x:Name="circulo" Stroke="LightGreen"
+					StrokeThickness="{StaticResource espessura}"
+					Data="{StaticResource geometriacirculo}"
+					RenderTransform="{StaticResource transform}"/>
+			</Grid>
+		</Grid>
+	</DockPanel>
+</UserControl>

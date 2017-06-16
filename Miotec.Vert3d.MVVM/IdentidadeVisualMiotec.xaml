@@ -1,0 +1,29 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	
+	<Viewbox x:Key="MarcaMiotec">
+		<Grid Width="75" Height="75" >
+			<Rectangle Clip="M 37.65872,1.805172 c 19.45103,0 35.31533,15.8644 35.31533,35.31528 0,0.3488 -0.007,0.6958 -0.0168,1.0422 -8.4262,-22.39148 -18.5672,-27.97548 -27.3556,-9.14446 -8.05844,17.26696 -10.07115,14.70226 -18.17671,2.18408 -8.70366,-13.4423 -17.1277,-2.30119 -24.88894,9.4771 -0.23308,-2.60476 -0.24813,-4.21552 0.0364,-7.56192 1.99851,-17.57808 16.98832,-31.31228 35.08635,-31.31228 z" >
+				<Rectangle.Fill>
+					<RadialGradientBrush GradientOrigin="23.762,10.903" Center="23.762,10.903" RadiusX="56.054" RadiusY="56.054" MappingMode="Absolute">
+						<GradientStop Color="#FF1C545C" Offset="0.63"/>
+						<GradientStop Color="#FF3BB3C3" Offset="0.19"/>
+					</RadialGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle Clip="M 70.34187,49.011052 c -4.90004,13.6306 -17.96572,23.4245 -33.24764,23.4245 -15.0691,0 -27.98317,-9.5223 -33.03775,-22.8565 6.25978,-9.29477 13.61819,-20.7851 18.54896,-11.0491 8.72792,17.23371 15.09951,18.2663 21.41296,8.2131 1.03311,-1.6451 2.08422,-3.5974 3.17252,-5.8395 3.42519,-6.8717 9.49381,-21.25736 16.03846,-8.46627 1.97637,3.8627 4.49886,9.6725 7.11249,16.57377 z">
+				<Rectangle.Fill>
+					<RadialGradientBrush RadiusY="50.378" RadiusX="50.378" GradientOrigin="20.5,35.25" Center="20.5,35.25" MappingMode="Absolute">
+						<GradientStop Color="#FF678CC2" Offset="0.263"/>
+						<GradientStop Color="#FF005CA1" Offset="0.547"/>
+						<GradientStop Color="#FFA8C2E4"/>
+						<GradientStop Color="#FF004879" Offset="0.773"/>
+						<GradientStop Color="#FF003960" Offset="1"/>
+					</RadialGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+		</Grid>
+	</Viewbox>
+	
+</ResourceDictionary>

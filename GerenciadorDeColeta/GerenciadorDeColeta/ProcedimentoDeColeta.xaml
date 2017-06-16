@@ -1,0 +1,19 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:GerenciadorDeColeta"
+	mc:Ignorable="d"
+	x:Class="GerenciadorDeColeta.ProcedimentoDeColeta"
+	x:Name="UserControl">
+
+	<Border Background="Black">
+
+		<StackPanel x:Name="LayoutRoot" Background="#FFB13232" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+			<local:VisualizacaoCamera Width="800" Height="600"/>			
+			<Slider Value="{Binding MinPosition}" Minimum="0" Maximum="1" LargeChange="0.01" SmallChange="0.01" Orientation="Vertical" />
+			<Slider Value="{Binding MaxPosition}" Minimum="0" Maximum="1" LargeChange="0.01" SmallChange="0.01" Orientation="Vertical"/>
+		</StackPanel>
+	</Border>
+</UserControl>

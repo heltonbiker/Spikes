@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ProcedimentoColeta"
+        x:Class="ProcedimentoColeta.TelaColetaView"
+        Title="MainWindow"
+		WindowState="Maximized">
+	
+	<Window.DataContext>
+		<local:TelaColetaViewModel/>
+	</Window.DataContext>
+	
+    <DockPanel>
+		<Border DockPanel.Dock="Top" HorizontalAlignment="Center" Padding="10">
+    		<StackPanel Orientation="Horizontal" Height="30" >
+    			<Button Content="Coletar" Margin="5,0" Command="{Binding ComandoIrParaTelaCaptura, Mode=OneWay}" />
+    			<Button Content="Identificar Marcadores"  Margin="5,0" Command="{Binding ComandoIrParaTelaMarcadores, Mode=OneWay}" />
+    		</StackPanel>
+    	</Border>
+    	<ContentControl Content="{Binding ProcedimentoAtivo}">
+    	</ContentControl>
+	</DockPanel>
+</Window>

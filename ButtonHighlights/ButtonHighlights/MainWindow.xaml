@@ -1,0 +1,104 @@
+﻿<Window x:Class="ButtonHighlights.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ButtonHighlights"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+					xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+
+
+	<Window.Resources>
+
+		<System:Double x:Key="TamanhoBotãoNavegação">100</System:Double>
+		<System:Double x:Key="TamanhoIcone">50</System:Double>
+
+		<Color x:Key="MouseOverColor">#88FFFFFF</Color>
+		<Color x:Key="NormalColor">#66FFFFFF</Color>
+		<Color x:Key="PressedColor">#44FFFFFF</Color>
+		<Color x:Key="DisabledColor"/>
+
+		<LinearGradientBrush x:Key="GradienteBordaPressionado" StartPoint="0.5,0" EndPoint="0.5,1">
+			<GradientStop Color="#88000000" Offset="0"/>
+			<GradientStop Color="#88FFFFFF" Offset="1"/>
+		</LinearGradientBrush>
+
+		<Style TargetType="ButtonBase">
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="local:PropriedadeAnexada.Cor" Value="{StaticResource NormalColor}"/>
+			<Setter Property="BorderBrush" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="0"/>
+			<Setter Property="Margin" Value="5 5 0 5"/>
+			<Setter Property="Width" Value="{StaticResource TamanhoBotãoNavegação}"/>
+			<Setter Property="Height" Value="{StaticResource TamanhoBotãoNavegação}"/>
+			<Setter Property="FontSize" Value="10"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Control">
+						<Grid x:Name="root">
+							<Border 
+								x:Name="CorFundoSólida" 
+								Background="{TemplateBinding Background}" 
+								BorderBrush="{TemplateBinding Background}"
+								BorderThickness="0"
+								CornerRadius="8"/>
+							<Border 
+								x:Name="GradienteOverlay"
+								CornerRadius="8"
+								BorderThickness="{TemplateBinding BorderThickness}"
+								BorderBrush="{TemplateBinding BorderBrush}"
+							>
+								<Border.Background>
+									<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+										<GradientStop Color="{Binding Path=(local:PropriedadeAnexada.Cor), RelativeSource={RelativeSource TemplatedParent}}" Offset="0"/>
+										<GradientStop Offset="0.8"/>
+									</LinearGradientBrush>
+								</Border.Background>
+							</Border>
+							<Border Padding="20">
+								<Path Fill="{TemplateBinding Foreground}" Stretch="Uniform">
+									<Path.Data>
+										<EllipseGeometry RadiusX="10" RadiusY="10"/>
+									</Path.Data>
+								</Path>								
+							</Border>
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+			<Style.Triggers>
+				<Trigger Property="IsMouseOver" Value="true">
+					<Setter Property="local:PropriedadeAnexada.Cor" Value="{DynamicResource MouseOverColor}"/>
+				</Trigger>
+				<Trigger Property="IsPressed" Value="True">
+					<Setter Property="local:PropriedadeAnexada.Cor" Value="{DynamicResource PressedColor}"/>
+					<Setter Property="BorderBrush" Value="{StaticResource GradienteBordaPressionado}"/>
+					<Setter Property="BorderThickness" Value="1 2 1 2"/>
+				</Trigger>
+				<Trigger Property="IsEnabled" Value="false">
+					<Setter Property="local:PropriedadeAnexada.Cor" Value="{DynamicResource DisabledColor}"/>
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+
+		<Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type ButtonBase}}"/>
+		<Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource {x:Type ButtonBase}}">
+			<Style.Triggers>
+				<Trigger Property="IsChecked" Value="True">
+					<Setter Property="local:PropriedadeAnexada.Cor" Value="{DynamicResource PressedColor}"/>
+					<Setter Property="BorderBrush" Value="{StaticResource GradienteBordaPressionado}"/>
+					<Setter Property="BorderThickness" Value="1 2 1 2"/>
+				</Trigger>				
+			</Style.Triggers>
+		</Style>
+	</Window.Resources>
+	
+    <Grid Background="#FF2E84FF">
+		<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+			<Button Background="#FF0C850C"/>
+			<ToggleButton Background="RoyalBlue" />
+		</StackPanel>
+    </Grid>
+</Window>

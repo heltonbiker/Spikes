@@ -1,0 +1,98 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:TesteMarcadoresView"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	mc:Ignorable="d"    
+	x:Class="TesteMarcadoresView.MarcadoresView"
+	x:Name="UserControl">
+
+	<UserControl.Resources>
+		<sys:Double x:Key="escala">10</sys:Double>
+		<sys:Double x:Key="raio">20</sys:Double>
+		<EllipseGeometry x:Key="geometriacirculo"
+			RadiusX="{StaticResource raio}"
+			RadiusY="{StaticResource raio}"/>
+		<ScaleTransform x:Key="transform" ScaleX="{StaticResource escala}" ScaleY="{StaticResource escala}" />
+		<i:NormalConverter x:Key="NormalConverter"/>
+	</UserControl.Resources>
+
+
+	<Grid x:Name="AreaEventos"
+		MouseMove="AreaEventos_MouseMove"
+		MouseEnter="AreaEventos_MouseEnter"
+		MouseLeave="AreaEventos_MouseLeave" 
+		MouseLeftButtonDown="AreaEventos_MouseLeftButtonDown" 
+		MouseLeftButtonUp="AreaEventos_MouseLeftButtonUp"
+		HorizontalAlignment="Center" VerticalAlignment="Center" ClipToBounds="True" Background="#FFC29999" MouseRightButtonDown="AreaEventos_MouseRightButtonDown">
+		<Viewbox x:Name="ViewboxImagemOriginal" >
+			<Image x:Name="ImagemOriginalMarcadores" Stretch="Uniform" Source="/TesteMarcadoresView;component/white.png" Height="1024.143" Width="768.107" />
+		</Viewbox>
+		<ItemsControl x:Name="MarcadoresSelecionados" ItemsSource="{Binding ListaPontos}">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<Canvas IsItemsHost="True" />
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>						
+			<ItemsControl.ItemContainerStyle>
+				<Style TargetType="{x:Type FrameworkElement}">
+					<Setter Property="Canvas.Left">
+						<Setter.Value>
+							<MultiBinding Converter="{StaticResource NormalConverter}">
+								<Binding Path="X"/>
+								<Binding ElementName="MarcadoresSelecionados" Path="ActualWidth"/>
+							</MultiBinding>
+						</Setter.Value>
+					</Setter>
+					<Setter Property="Canvas.Top">
+						<Setter.Value>
+							<MultiBinding Converter="{StaticResource NormalConverter}">
+								<Binding Path="Y"/>
+								<Binding ElementName="MarcadoresSelecionados" Path="ActualHeight"/>
+							</MultiBinding>
+						</Setter.Value>
+					</Setter>
+				</Style>				
+			</ItemsControl.ItemContainerStyle>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="Point">
+					<Ellipse Fill="Blue"
+						Width="6"
+						Height="6"
+						Margin="-3,-3,3,3" />
+				</DataTemplate>				
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		<Viewbox x:Name="ViewboxZoom" RenderTransform="{StaticResource transform}" Clip="{StaticResource geometriacirculo}" Visibility="Hidden">
+			<Grid Height="420" Width="315">
+				<Image x:Name="ImagemZoom" Stretch="Uniform" Source="white.png" />
+				<ItemsControl x:Name="MarcadoresSelecionadosZoom" ItemsSource="{Binding ListaPontos}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<Canvas IsItemsHost="True" />
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>						
+					<ItemsControl.ItemContainerStyle>
+						<Style TargetType="{x:Type FrameworkElement}">
+							<Setter Property="Canvas.Left" Value="{Binding X}" />
+							<Setter Property="Canvas.Top" Value="{Binding Y}" />
+						</Style>				
+					</ItemsControl.ItemContainerStyle>
+					<ItemsControl.ItemTemplate>
+						<DataTemplate DataType="Point">
+							<Ellipse Fill="Blue"
+								Width="8"
+								Height="8"
+								Margin="-4,-4,4,4" />
+						</DataTemplate>				
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</Grid>
+		</Viewbox>
+		<Canvas>
+			<Path x:Name="CirculoGuia" Data="{StaticResource geometriacirculo}" Stroke="#FF00AA00" StrokeThickness="2" Height="1024.143" Width="768.107" />
+		</Canvas>
+	</Grid>
+</UserControl>

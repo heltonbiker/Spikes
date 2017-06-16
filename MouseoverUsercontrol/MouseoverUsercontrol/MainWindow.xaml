@@ -1,0 +1,25 @@
+﻿<Window x:Class="MouseoverUsercontrol.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MouseoverUsercontrol"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+		<local:Controle Width="200" Height="200">
+			<local:Controle.Style>
+				<Style>
+					<Setter Property="Control.Background" Value="Transparent"/>
+					<Style.Triggers>
+						<Trigger Property="Control.IsMouseOver" Value="True">
+							<Setter Property="Control.Background" Value="Teal"/>
+						</Trigger>
+					</Style.Triggers>
+				</Style>
+			</local:Controle.Style>
+		</local:Controle>
+
+	</Grid>
+</Window>

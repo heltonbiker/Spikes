@@ -1,0 +1,46 @@
+﻿<Window x:Class="CartesianCanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CartesianCanvas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="100" Width="100">
+
+	<Window.Resources>
+		<Style x:Key="Cartesian" TargetType="Canvas">
+			<Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+			<Setter Property="RenderTransform">
+				<Setter.Value>
+					<ScaleTransform ScaleY="-1"/>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
+	
+    <Grid>
+		<Canvas Style="{StaticResource Cartesian}">
+			<Path Stroke="Red" StrokeThickness="1">
+				<Path.Data>
+					<PathGeometry>
+						<PathGeometry.Figures>
+							<PathFigure StartPoint="0, 3">
+								<LineSegment Point="1, 6"/>
+								<LineSegment Point="2, 3"/>
+								<LineSegment Point="3, 6"/>
+								<LineSegment Point="4, 3"/>
+								<LineSegment Point="5, 6"/>
+								<LineSegment Point="6, 3"/>
+							</PathFigure>
+						</PathGeometry.Figures>
+					</PathGeometry>
+				</Path.Data>	
+			</Path>
+			<Path Fill="Red">
+				<Path.Data>
+					<EllipseGeometry Center="50,10" RadiusX="5" RadiusY="5"/>
+				</Path.Data>
+			</Path>
+		</Canvas>
+	</Grid>
+</Window>

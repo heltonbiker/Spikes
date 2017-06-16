@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculaFFT", "CalculaFFT\CalculaFFT.csproj", "{3863FD12-7161-4A67-8CEE-0254732E6121}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.DSP", "..\..\00 GIT\MiotecGit\BioSinais.DSP\BioSinais.DSP.csproj", "{DCF165F7-C787-4B19-95B2-F643A723EF90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.GeradoresSinal", "..\..\00 GIT\MiotecGit\BioSinais.GeradoresSinal\BioSinais.GeradoresSinal.csproj", "{F7BA1631-084E-49EA-A94D-581C4F29AAD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.DSP.Legacy", "..\..\00 GIT\MiotecGit\BioSinais.DSP.Legacy\BioSinais.DSP.Legacy.csproj", "{B82453A5-A1C3-4D78-8EE3-97404EB30F78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3863FD12-7161-4A67-8CEE-0254732E6121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3863FD12-7161-4A67-8CEE-0254732E6121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3863FD12-7161-4A67-8CEE-0254732E6121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3863FD12-7161-4A67-8CEE-0254732E6121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BA1631-084E-49EA-A94D-581C4F29AAD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BA1631-084E-49EA-A94D-581C4F29AAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BA1631-084E-49EA-A94D-581C4F29AAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BA1631-084E-49EA-A94D-581C4F29AAD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82453A5-A1C3-4D78-8EE3-97404EB30F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82453A5-A1C3-4D78-8EE3-97404EB30F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82453A5-A1C3-4D78-8EE3-97404EB30F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82453A5-A1C3-4D78-8EE3-97404EB30F78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,97 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:Miotec.Vert3d.Application.ViewModels"
+	xmlns:vw="clr-namespace:Miotec.Vert3d.Application.Views"
+	xmlns:m="clr-namespace:Miotec.Vert3d.Application.Model"
+	xmlns:ap="clr-namespace:Miotec.Vert3d.Application"
+	xmlns:System="clr-namespace:System;assembly=mscorlib"
+	xmlns:res="clr-namespace:Miotec.Vert3d.Application.Recursos"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" >
+	
+	<System:String x:Key="MarcaMiotecRodapeRelatorio">Vert 3D - Miotec</System:String>
+
+	<SolidColorBrush x:Key="CorBorda" Color="#FF1D82B6"/>
+	<SolidColorBrush x:Key="CorLabels" Color="#FF174091"/>
+	<SolidColorBrush x:Key="CorCampos" Color="Black"/>
+	
+	<Color x:Key="ShadingAzul">#FFF3FFFF</Color>
+				
+	<Style x:Key="bordaAzul" TargetType="Border">
+		<Setter Property="BorderThickness" Value="0.05cm"/>
+		<Setter Property="BorderBrush" Value="{StaticResource CorBorda}"/>
+	</Style>
+	
+	<Style x:Key="BordaOverlay" TargetType="Border">
+		<Setter Property="Visibility" Value="Hidden"/>
+		<Setter Property="Background" Value="#0C000000"/>
+		<Setter Property="BorderThickness" Value="0,0.1"/>
+		<Setter Property="BorderBrush" Value="Black"/>
+	</Style>
+	
+	
+	<Style x:Key="TituloBlocoRelatorio" TargetType="{x:Type TextBlock}">
+		<Setter Property="FontSize" Value="20"/>
+		<Setter Property="Foreground" Value="{StaticResource CorLabels}"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style x:Key="TituloSubBlocoRelatorio" TargetType="{x:Type TextBlock}">
+		<Setter Property="FontSize" Value="16"/>
+		<Setter Property="Foreground" Value="{StaticResource CorLabels}"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>	
+	
+	<System:Double x:Key="escala">10</System:Double>
+	<System:Double x:Key="raio">20</System:Double>
+	
+	<EllipseGeometry x:Key="geometriacirculo"
+		RadiusX="{StaticResource raio}"
+		RadiusY="{StaticResource raio}"/>
+	<ScaleTransform x:Key="transform" ScaleX="{StaticResource escala}" ScaleY="{StaticResource escala}" />
+	
+	<ap:NormalConverter x:Key="NormalConverter"/>	
+	<ap:BitmapToSource x:Key="BitmapToSource"/>
+	
+	
+	<DataTemplate x:Name="TelaPacientes" DataType="{x:Type vm:ShellViewModel}">
+		<Border x:Name="bordaLayoutRoot" Padding="15" d:DesignWidth="1440" d:DesignHeight="900" >	
+			<vw:TelaInicialView/>
+		</Border>
+	</DataTemplate>	
+	
+		
+	<DataTemplate x:Key="CapturaTemplate" DataType="{x:Type vm:ColetaViewModel}">
+		<vw:CapturaView d:DesignWidth="662" d:DesignHeight="345"/>
+	</DataTemplate>
+	
+	<DataTemplate x:Key="MarcadoresTemplate" DataType="{x:Type vm:ColetaViewModel}">
+		<vw:MarcadoresView/>
+	</DataTemplate>
+	
+	<DataTemplate x:Key="ProcessamentoTemplate" DataType="{x:Type vm:ColetaViewModel}">
+		<vw:ProcessamentoView/>
+	</DataTemplate>	
+	
+	
+	<DataTemplate x:Key="AnaliseTemplate" DataType="{x:Type vm:AnaliseViewModel}">
+		<vw:TelaAnaliseView/>
+	</DataTemplate>
+	
+	<DataTemplate x:Key="RelatorioTemplate" DataType="{x:Type vm:AnaliseViewModel}">
+		<vw:TelaRelatorioView/>
+	</DataTemplate>	
+	
+	<DataTemplate DataType="{x:Type vm:AnaliseViewModel}">
+		<vw:AnaliseView/>
+	</DataTemplate>
+	
+	<DataTemplate DataType="{x:Type vm:ColetaViewModel}">
+		<vw:ColetaView/>
+	</DataTemplate>
+
+</ResourceDictionary>

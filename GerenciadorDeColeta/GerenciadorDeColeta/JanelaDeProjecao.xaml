@@ -1,0 +1,13 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="GerenciadorDeColeta.JanelaDeProjecao"
+	x:Name="Window"
+	Title="JanelaDeProjecao"
+	ShowInTaskbar="False"
+	WindowStyle="None"
+	WindowState="Maximized"
+	Width="640" Height="480">
+
+	<Image x:Name="imagem_projeção" Source="{Binding ImageSource}"/>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="ModalSettings.ModalSettingsWindow"
+	x:Name="Window"
+	Title="ModalSettingsWindow"
+	Width="640" Height="480">
+
+	<StackPanel x:Name="LayoutRoot" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<TextBlock Text='Digite o valor desejado para as propriedades:'/>
+		<Grid >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.22*"/>
+				<ColumnDefinition Width="0.78*"/>
+			</Grid.ColumnDefinitions>
+			<TextBox Text="{Binding Valor}" d:LayoutOverrides="Width, Height" Grid.Column="1"/>
+			<TextBox Text="{Binding OutroValor}" d:LayoutOverrides="Width, Height" Grid.Row="1" Grid.Column="1"/>
+			<Label Content="Valor"/>
+			<Label Content="Outro Valor" Grid.Row="1"/>
+		</Grid>
+		<Button x:Name="OK" Content="OK" IsDefault="True" Click="OK_Click"/>
+		<Button x:Name="Cancelar" Content="{Binding Name, RelativeSource={RelativeSource Self}}" IsCancel="True"/>
+	</StackPanel>
+</Window>

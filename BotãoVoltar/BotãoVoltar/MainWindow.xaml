@@ -1,0 +1,107 @@
+﻿<Window x:Class="BotãoVoltar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BotãoVoltar"
+		xmlns:System="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="128.481" Width="155.063" Background="LightBlue">
+
+	<Window.Resources>
+		<System:Double x:Key="AlturaBotãoVoltar">42</System:Double>
+		<System:Double x:Key="LarguraBotãoVoltar">58</System:Double>
+
+		<SolidColorBrush x:Key="WindowBackground" Color="#085D99"/>
+
+		<LinearGradientBrush x:Key="GradienteStrokePadrão"
+							 EndPoint="0.5,1"
+							 StartPoint="0.5,0">
+			<GradientStop Color="#FF021019" Offset="0.5"/>
+			<GradientStop Color="#5C99C2" Offset="1"/>
+		</LinearGradientBrush>
+
+		<LinearGradientBrush 
+			x:Key="GradienteFillPadrão"
+			EndPoint="0.5,1" 
+			StartPoint="0.5,0">
+			<GradientStop Color="#FF021019" Offset="0"/>
+			<GradientStop Color="#FF005295" Offset="1"/>
+		</LinearGradientBrush>
+
+		<LinearGradientBrush 
+			x:Key="GradienteFillMouseOver"
+			StartPoint="0,0" 
+			EndPoint="0,1">
+			<GradientStop Color="#FF021019" Offset="0"/>
+			<GradientStop Offset="0.5"/>
+		</LinearGradientBrush>
+
+
+
+		<Style TargetType="Button">
+			<Style.Resources>
+				<PathGeometry x:Key="VoltarGeometry">
+					<PathGeometry.Figures>
+						m 11.850218 0.53969093 20 0 c 2 0 4 0.99999997 4 2.99999997 l 0 17.0000001 c 0 2 -2 4 -4 4 l -20 0 c -0.600319 0 -0.561149 0.07914 -1.640287 -1.000798 L 0.85021815 12.539691 9.8502181 1.5396909 C 10.850218 0.53969093 10.850218 0.53969093 11.850218 0.53969093 Z
+					</PathGeometry.Figures>
+				</PathGeometry>
+				<Style TargetType="Path">
+					<Setter Property="Fill" Value="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}"/>
+					<Setter Property="Stroke" Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+					<Setter Property="Stretch" Value="Fill"/>
+					<Setter Property="Data" Value="{StaticResource VoltarGeometry}"/>
+				</Style>
+				<System:Double x:Key="opacidadeDestaque">0.3</System:Double>
+			</Style.Resources>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="Background" Value="{StaticResource GradienteFillPadrão}"/>
+			<Setter Property="BorderBrush" Value="{StaticResource GradienteStrokePadrão}"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Border 
+							x:Name="border"
+							Width="{StaticResource LarguraBotãoVoltar}"	
+							Height="{StaticResource AlturaBotãoVoltar}"
+						>
+							<Grid x:Name="layers">
+								<Path x:Name="fundo"/>
+								<Path x:Name="topo" Opacity="0"/>
+								<Border Padding="10" Margin="10 0 0 0">
+									<ContentPresenter 
+										VerticalAlignment="Center" 
+										HorizontalAlignment="Center"
+										TextElement.Foreground="{TemplateBinding Foreground}"
+										TextElement.FontSize="12"
+										TextElement.FontWeight="SemiBold"
+									/>
+								</Border>
+							</Grid>
+						</Border>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsMouseOver" Value="true">
+								<Setter TargetName="topo" Property="Fill" Value="{StaticResource GradienteFillMouseOver}"/>
+								<Setter TargetName="topo" Property="Opacity" Value="{StaticResource opacidadeDestaque}"/>
+							</Trigger>
+							<Trigger Property="IsPressed" Value="true">
+								<Setter TargetName="topo" Property="Fill" Value="black"/>
+								<Setter TargetName="topo" Property="Opacity" Value="{StaticResource opacidadeDestaque}"/>
+							</Trigger>							
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+			<Style.Triggers>
+
+				<Trigger Property="IsEnabled" Value="false">
+					
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+	</Window.Resources>
+	
+	<Grid>
+		<Button Content="Voltar" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+	</Grid>
+</Window>

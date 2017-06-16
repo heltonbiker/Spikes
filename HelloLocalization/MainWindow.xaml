@@ -1,0 +1,39 @@
+﻿<Window x:Class="HelloLocalization.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloLocalization"
+        mc:Ignorable="d"
+        Title="MainWindow">
+	
+	<Border Padding="15">
+		<Grid>
+			<ComboBox ItemsSource="{Binding Linguagens}"
+					  SelectedItem="{Binding LinguagemSelecionada}"
+					  HorizontalAlignment="Right"
+					  VerticalAlignment="Top"
+					  Width="200"
+					  Height="30"/>
+			<UniformGrid Columns="2" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top">
+				<Label Content="Idioma"/>
+				<TextBlock Text=""/>
+			
+				<Label Content="Gato"/>
+				<TextBlock Text=""/>
+
+				<Label Content="Cachorro"/>
+				<TextBlock Text=""/>
+
+				<Label Content="Galinha"/>
+				<TextBlock Text=""/>
+
+				<Label Content="Rato"/>
+				<TextBlock Text=""/>
+
+
+			</UniformGrid>
+        
+		</Grid>
+	</Border>
+</Window>

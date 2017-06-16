@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace IntegracaoColetaVVM.View
+{
+	public partial class MarcadoresView : UserControl
+	{
+		public MarcadoresView()
+		{
+			this.InitializeComponent();
+		}
+
+		private void Viewbox_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+		{
+			var pai = this.DataContext as TelaColetaViewModel;
+
+            double x = e.GetPosition(ViewboxMarcadores).X;
+            double y = e.GetPosition(ViewboxMarcadores).Y;
+
+            double w = ViewboxMarcadores.ActualWidth;
+            double h = ViewboxMarcadores.ActualHeight;
+
+            double W = ImagemMarcadores.Source.Width;
+            double H = ImagemMarcadores.Source.Height;
+
+            double xscale = W/w;
+            double yscale = H/h;
+
+            double xnorm = x/w;
+            double ynorm = y/h;
+
+            Canvas.SetLeft(CursorElipse, x*xscale);
+            Canvas.SetTop(CursorElipse, y*yscale);
+
+            
+
+            //Console.WriteLine(string.Format("{0}, {1}", xnorm * W, ynorm * H));
+
+            //pai.PegaPosicao(e.GetPosition(this).X, e.GetPosition(this).Y);
+		}
+	}
+}

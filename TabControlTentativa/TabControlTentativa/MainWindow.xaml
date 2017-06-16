@@ -1,0 +1,67 @@
+﻿<Window x:Class="TabControlTentativa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TabControlTentativa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+	
+	<Window.Resources>
+		<Style TargetType="{x:Type local:TabItemMio}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type local:TabItemMio}">
+						<Border x:Name="border" BorderThickness="0"
+								BorderBrush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"
+								Background="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}">
+							<DockPanel Width="120">
+								<Image x:Name="buttonImage"
+									   DockPanel.Dock="Top"
+									   Height="40"
+									   Margin="5">
+									<Image.Source>
+										<DrawingImage>
+											<DrawingImage.Drawing>
+												<GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}"
+																 Geometry="{Binding Icone, RelativeSource={RelativeSource TemplatedParent}}"/>
+											</DrawingImage.Drawing>
+										</DrawingImage>
+									</Image.Source>
+								</Image>
+								<TextBlock FontSize="18" HorizontalAlignment="Center" Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}"/>
+							</DockPanel>
+						</Border>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsSelected" Value="true">
+								<Setter Property="Background" Value="LightGreen"/>
+								<Setter TargetName="border" Property="BorderThickness" Value="2,2,0,2"/>
+							</Trigger>
+							<Trigger Property="IsMouseOver" Value="true">
+								<Setter Property="Background" Value="Pink"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+		<EllipseGeometry x:Key="iconeRedondo" RadiusX="20" RadiusY="20"/>
+		<RectangleGeometry x:Key="iconeQuadrado" Rect="0,0,20,20"/>
+
+
+	</Window.Resources>
+	<Grid>
+
+
+		<TabControl TabStripPlacement="Left">
+			<local:TabItemMio Header="GluBlu"
+							  Foreground="DarkGoldenrod"
+							  Icone="{StaticResource iconeQuadrado}">Contiúdo Pacientes</local:TabItemMio>
+			<local:TabItemMio Header="Exames"
+							  Foreground="Blue"
+							  Icone="{StaticResource iconeQuadrado}">Conteúdo Exames</local:TabItemMio>
+		</TabControl>
+
+	</Grid>
+</Window>

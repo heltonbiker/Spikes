@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6E5478D-D6FB-4067-8395-AB20A93F8AA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StCamSWareCS</RootNamespace>
+    <AssemblyName>StCamSWareCS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\debug\x86\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\AnyCPU\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\bin\Debug\x86\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\..\..\bin\x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\bin\Debug\x64\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>..\..\..\..\bin\x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CStillImage.cs" />
+    <Compile Include="frmAVISetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAVISetting.Designer.cs">
+      <DependentUpon>frmAVISetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSnapShot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSnapShot.Designer.cs">
+      <DependentUpon>frmSnapShot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFPS.cs" />
+    <Compile Include="CStCamera.cs" />
+    <Compile Include="frmALCWeightArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmALCWeightArea.Designer.cs">
+      <DependentUpon>frmALCWeightArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCallback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCallback.Designer.cs">
+      <DependentUpon>frmCallback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRenameCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRenameCamera.Designer.cs">
+      <DependentUpon>frmRenameCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectCamera.Designer.cs">
+      <DependentUpon>frmSelectCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetBase.Designer.cs">
+      <DependentUpon>frmSetBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVersionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVersionInfo.Designer.cs">
+      <DependentUpon>frmVersionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Native.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmALCWeightArea.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmALCWeightArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAVISetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAVISetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCallback.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCallback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorMatrix.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmColorMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRenameCamera.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRenameCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectCamera.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSnapShot.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSnapShot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThumbnail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmThumbnail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVersionInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmVersionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingButton.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingCheckBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingComboBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingDefectPixelPosition.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingDefectPixelPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingNumericUpDown.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingNumericUpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingPixelPosition.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingPixelPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingRange.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingRange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingScrollBar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingScrollBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingTextBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingCtrl\SettingTrackBar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SettingTrackBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThumbnailCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ThumbnailCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SettingCtrl\CItemForComboBox.cs" />
+    <Compile Include="frmColorMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorMatrix.Designer.cs">
+      <DependentUpon>frmColorMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThumbnail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThumbnail.Designer.cs">
+      <DependentUpon>frmThumbnail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\ISettingCtrl.cs" />
+    <Compile Include="SettingCtrl\ISettingRange.cs" />
+    <Compile Include="SettingCtrl\ISettingRange2.cs" />
+    <Compile Include="SettingCtrl\ISettingValue.cs" />
+    <Compile Include="SettingCtrl\SettingButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingButton.Designer.cs">
+      <DependentUpon>SettingButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingCheckBox.Designer.cs">
+      <DependentUpon>SettingCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingComboBox.Designer.cs">
+      <DependentUpon>SettingComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingDefectPixelPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingDefectPixelPosition.Designer.cs">
+      <DependentUpon>SettingDefectPixelPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingLabel.Designer.cs">
+      <DependentUpon>SettingLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingNameLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingNameLabel.Designer.cs">
+      <DependentUpon>SettingNameLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingNumericUpDown.Designer.cs">
+      <DependentUpon>SettingNumericUpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingPixelPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingPixelPosition.Designer.cs">
+      <DependentUpon>SettingPixelPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingRange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingRange.Designer.cs">
+      <DependentUpon>SettingRange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingScrollBar.Designer.cs">
+      <DependentUpon>SettingScrollBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingTextBox.Designer.cs">
+      <DependentUpon>SettingTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SettingCtrl\SettingTrackBar.Designer.cs">
+      <DependentUpon>SettingTrackBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StCamD.cs" />
+    <Compile Include="ThumbnailCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThumbnailCtrl.Designer.cs">
+      <DependentUpon>ThumbnailCtrl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO6_2020_Edit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

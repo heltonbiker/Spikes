@@ -1,0 +1,22 @@
+﻿<Window x:Class="Miotec.SocketCommunication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Miotec.SocketCommunication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600"
+		x:Name="window">
+
+	<Grid x:Name="EventArea" Background="LightGray" MouseMove="Grid_MouseMove">
+		<Ellipse Width="40" Height="40" Margin="-20,-20,0,0"
+				 Fill="Orange" StrokeThickness="2" Stroke="Black"
+				 HorizontalAlignment="Left" VerticalAlignment="Top"
+				 RenderTransformOrigin="0.5 0.5">
+			<Ellipse.RenderTransform>
+				<TranslateTransform X="{Binding Position.X, ElementName=window}"
+									Y="{Binding Position.Y, ElementName=window}"/>
+			</Ellipse.RenderTransform>
+		</Ellipse>				 
+	</Grid>
+</Window>

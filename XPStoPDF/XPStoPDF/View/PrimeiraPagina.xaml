@@ -1,0 +1,116 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:gl="clr-namespace:System.Globalization;assembly=mscorlib"
+	mc:Ignorable="d"
+	x:Class="XPStoPDF.PrimeiraPagina"
+	x:Name="UserControl"
+	d:DesignWidth="793.7"
+	d:DesignHeight="1122.5"
+	Background="White">
+	
+	<UserControl.Resources>
+		<SolidColorBrush x:Key="CorBorda" Color="#FF1D82B6"/>
+		<SolidColorBrush x:Key="CorLabels" Color="#FF174091"/>
+		<SolidColorBrush x:Key="CorCampos" Color="Black"/>
+		
+		<Style x:Key="bordaAzul" TargetType="Border">
+			<Setter Property="BorderThickness" Value="0.05cm"/>
+			<Setter Property="BorderBrush" Value="{StaticResource CorBorda}"/>
+		</Style>
+		<Color x:Key="ShadingAzul">#FFF3FFFF</Color>
+		
+	</UserControl.Resources>
+	
+	<Grid x:Name="LayoutRoot" Margin="3cm">
+		
+		<Grid.RowDefinitions>
+			<RowDefinition Height="3.5cm"/>
+			<RowDefinition Height="1.5cm"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="0.5cm"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<Border Style="{StaticResource bordaAzul}">
+			<DockPanel>
+				<Image Width="3.5cm"/>
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<UniformGrid Rows="3" Columns="1">
+						<UniformGrid.Background>
+							<SolidColorBrush Color="{StaticResource ShadingAzul}"/>
+						</UniformGrid.Background>
+						<DockPanel>
+							<TextBlock Text="Paciente: " Foreground="{DynamicResource CorLabels}"/>
+							<TextBlock Text="{Binding Nome, FallbackValue=[NomePaciente]}" Foreground="{DynamicResource CorCampos}"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock Text="Médico Examinador: " Foreground="{DynamicResource CorLabels}" />
+							<TextBlock Text="{Binding Avaliador, FallbackValue=[Avaliador]}"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock Text="Exame realizado em " Foreground="{DynamicResource CorLabels}" />
+							<TextBlock Text="{Binding DataRealizacao,  ConverterCulture={x:Static gl:CultureInfo.CurrentCulture}, StringFormat=d \\de MMMM \\de yyyy\, à\\s HHHH:mmmm }"/>
+						</DockPanel>					
+					</UniformGrid>
+					<Grid Grid.Row="1" Margin="0,0,30,0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="3cm"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<TextBlock Text="Dados do Paciente: " Foreground="{DynamicResource CorLabels}" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+						<TextBlock TextWrapping="Wrap" Foreground="{DynamicResource CorLabels}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1" d:LayoutOverrides="HorizontalAlignment"><Run Language="pt-br" Text="Idade"/></TextBlock>
+						<TextBlock TextWrapping="Wrap" Text="{Binding Idade}" Grid.Column="1" HorizontalAlignment="Right" Width="20.952" Margin="0,10,0,0" Grid.Row="1" d:LayoutOverrides="Height"/>
+						<TextBlock TextWrapping="Wrap" Foreground="{DynamicResource CorLabels}" HorizontalAlignment="Right" VerticalAlignment="Bottom" d:LayoutOverrides="HorizontalAlignment" RenderTransformOrigin="4.254,0.426" Grid.Column="2"><Run Language="pt-br" Text="Peso"/></TextBlock>
+						<TextBlock TextWrapping="Wrap" Foreground="{DynamicResource CorLabels}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="3"><Run Language="pt-br" Text="Altura"/></TextBlock>
+						<TextBlock TextWrapping="Wrap" Foreground="{DynamicResource CorLabels}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="4" Margin="0,0,-0.001,0"><Run Language="pt-br" Text="Gênero"/></TextBlock>
+						<TextBlock Grid.Column="2" TextWrapping="Wrap" Text="{Binding Peso}" HorizontalAlignment="Right" Grid.Row="1" d:LayoutOverrides="HorizontalAlignment, Height, GridBox" Margin="0,10,0,0"/>
+						<TextBlock Grid.Column="3" TextWrapping="Wrap" Text="{Binding Altura}" Grid.Row="1" d:LayoutOverrides="Height" HorizontalAlignment="Right" Margin="0,10,0,0"/>
+						<TextBlock Grid.Column="4" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Genero}" HorizontalAlignment="Right" Margin="0,10,0,0"/>
+						
+						
+					</Grid>
+				</Grid>
+			</DockPanel>
+		</Border>
+		<TextBlock Grid.Row="1" Text="AVALIAÇÃO POSTURAL POR ESTEREOMETRIA" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="{DynamicResource CorLabels}"/>
+		<Border Grid.Row="2" Style="{DynamicResource bordaAzul}">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="0.137*"/>
+					<RowDefinition Height="0.007*"/>
+					<RowDefinition Height="0.856*"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="0.424*"/>
+					<ColumnDefinition Width="0.076*"/>
+					<ColumnDefinition Width="0.415*"/>
+					<ColumnDefinition Width="0.085*"/>
+				</Grid.ColumnDefinitions>
+				<Border Style="{DynamicResource bordaAzul}" Grid.RowSpan="3" Grid.ColumnSpan="2">
+					<TextBlock Height="31.638" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="{DynamicResource CorLabels}"><Run Language="pt-br" Text="Mapa de Relevo [cm]" FontSize="16"/></TextBlock>
+				</Border>
+				<Viewbox Grid.Row="2">
+					<Path Stretch="Fill" Data="M 0,0 10,10 50,50 50,10"
+						Stroke="Red" StrokeThickness="0.1cm"/>
+				</Viewbox>
+				<TextBlock Grid.Column="2" TextWrapping="Wrap" Text="Mapa de Curvatura [cm]" HorizontalAlignment="Center" FontSize="16" Foreground="{DynamicResource CorLabels}"/>
+			</Grid>
+		
+		</Border>
+		
+	</Grid>
+</UserControl>

@@ -1,0 +1,86 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="ReportView.PatientInfo"
+	x:Name="UserControl" Width="540" Height="116" Background="White">
+
+    <Border BorderThickness="1" BorderBrush="Black" Padding="10">
+        <DockPanel x:Name="LayoutRoot">
+            <Viewbox x:Name="LogoMarca" VerticalAlignment="Top" HorizontalAlignment="Left" Height="49.969" d:LayoutOverrides="VerticalAlignment" Margin="0,0,10,0">
+                <StackPanel HorizontalAlignment="Left">
+                    <Viewbox x:Name="Logo" Stretch="Uniform" HorizontalAlignment="Right" Height="150" VerticalAlignment="Top">
+                        <Grid Width="75" Height="75" >
+                            <Rectangle Clip="M 37.65872,1.805172 c 19.45103,0 35.31533,15.8644 35.31533,35.31528 0,0.3488 -0.007,0.6958 -0.0168,1.0422 -8.4262,-22.39148 -18.5672,-27.97548 -27.3556,-9.14446 -8.05844,17.26696 -10.07115,14.70226 -18.17671,2.18408 -8.70366,-13.4423 -17.1277,-2.30119 -24.88894,9.4771 -0.23308,-2.60476 -0.24813,-4.21552 0.0364,-7.56192 1.99851,-17.57808 16.98832,-31.31228 35.08635,-31.31228 z" >
+                                <Rectangle.Fill>
+                                    <RadialGradientBrush GradientOrigin="23.762,10.903" Center="23.762,10.903" RadiusX="56.054" RadiusY="56.054" MappingMode="Absolute">
+                                        <GradientStop Color="#FF1C545C" Offset="0.63"/>
+                                        <GradientStop Color="#FF3BB3C3" Offset="0.19"/>
+                                    </RadialGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle Clip="M 70.34187,49.011052 c -4.90004,13.6306 -17.96572,23.4245 -33.24764,23.4245 -15.0691,0 -27.98317,-9.5223 -33.03775,-22.8565 6.25978,-9.29477 13.61819,-20.7851 18.54896,-11.0491 8.72792,17.23371 15.09951,18.2663 21.41296,8.2131 1.03311,-1.6451 2.08422,-3.5974 3.17252,-5.8395 3.42519,-6.8717 9.49381,-21.25736 16.03846,-8.46627 1.97637,3.8627 4.49886,9.6725 7.11249,16.57377 z">
+                                <Rectangle.Fill>
+                                    <RadialGradientBrush RadiusY="50.378" RadiusX="50.378" GradientOrigin="20.5,35.25" Center="20.5,35.25" MappingMode="Absolute">
+                                        <GradientStop Color="#FF678CC2" Offset="0.263"/>
+                                        <GradientStop Color="#FF005CA1" Offset="0.547"/>
+                                        <GradientStop Color="#FFA8C2E4"/>
+                                        <GradientStop Color="#FF004879" Offset="0.773"/>
+                                        <GradientStop Color="#FF003960" Offset="1"/>
+                                    </RadialGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </Grid>
+
+                    </Viewbox>
+                    <Viewbox x:Name="Marca" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="150">
+                        <Path Data="m 138.83882,30.971694 c 3.27003,0.27292 2.77946,5.45121 1.9e-4,5.72452 -4.89684,0 -8.74321,0.30302 -12.5268,-3.46612 -2.94642,-2.9296 -4.07274,-7.13684 -3.6598,-11.21276 0.37768,-3.72537 2.02389,-7.42956 4.8497,-9.71172 3.36847,-2.7200605 7.28535,-2.3075105 11.33671,-2.3075105 3.14289,0.2903405 2.87769,5.8126505 0,5.7754205 -1.33705,0 -2.23403,-0.0572 -3.0508,0.0156 -3.58415,0.32025 -5.91661,4.10761 -6.15665,7.74485 -0.23429,3.55247 1.58204,6.00833 4.82495,7.10495 1.30972,0.44304 2.30691,0.33273 4.3825,0.33273 z m -21.07889,0.20241 c 3.23696,0.0941 2.95751,5.42764 0,5.52211 l -3.22905,0 c -8.37582,0 -12.51194,-4.96261 -12.51194,-13.37431 0,-5.35554 1.89358,-10.92994 7.50677,-12.56367 3.28866,-0.9575905 4.85109,-0.7601305 8.23422,-0.7601305 3.09753,-0.12755 3.14368,5.5211205 0.0699,5.5219105 -3.98976,0 -8.22828,0.0563 -8.22808,5.06619 3.34035,0 4.03056,0 7.37091,0 2.62855,-0.0214 2.94107,5.34465 -2e-4,5.62311 l -7.37071,0 c 0,5.07867 4.05453,4.96479 8.15817,4.96479 z m -39.246023,2.33049 c -1.19683,1.18178 -2.42495,2.01796 -3.68456,2.50754 -1.25981,0.48979 -2.31444,0.81915 -3.16468,0.98789 -0.85023,0.16894 -1.73176,0.25331 -2.64498,0.25331 -1.73197,0 -3.46394,-0.32916 -5.1961,-0.98789 -1.731571,-0.65872 -3.172401,-1.57907 -4.321499,-2.76085 -1.149692,-1.18218 -1.976164,-2.47388 -2.480009,-3.8755 -0.503844,-1.40182 -0.834393,-2.55013 -0.992043,-3.44493 -0.157253,-0.895 -0.236078,-1.84902 -0.235682,-2.86226 0,-1.92507 0.243802,-3.55465 0.732001,-4.88893 0.487802,-1.33409 0.944312,-2.35564 1.36953,-3.06487 0.425218,-0.70923 1.086316,-1.54501 1.983691,-2.50794 0.89757,-0.96234 2.17303,-1.77277 3.826371,-2.4313 1.65294,-0.6587205 3.42412,-0.9878805 5.31374,-0.9878805 1.79475,0 3.51879,0.31233 5.17193,0.9369805 1.65314,0.62506 2.94444,1.41866 3.87331,2.38099 0.92886,0.96294 1.61373,1.80704 2.05459,2.5331 0.44067,0.72626 0.89757,1.7393 1.36993,3.03971 0.47235,1.30022 0.70843,2.96347 0.70863,4.99014 -2e-4,1.92507 -0.30738,3.7741 -0.92134,5.54706 -0.61396,1.77317 -1.53491,3.31858 -2.76283,4.63563 z m -11.71439,-2.43169 c 0.25173,0.13507 0.57495,0.23647 0.96848,0.30401 0.39372,0.0673 0.77913,0.1012 1.15703,0.1012 1.35407,0 2.58199,-0.42225 3.68435,-1.26655 1.10196,-0.84429 1.83416,-1.87437 2.1964,-3.09021 0.36204,-1.21565 0.54326,-2.44853 0.54326,-3.69804 0,-1.7904 -0.30698,-3.35225 -0.92094,-4.68613 -0.61416,-1.33409 -1.59829,-2.30514 -2.95217,-2.91316 -0.88193,-0.33768 -1.68503,-0.50662 -2.4093,-0.50662 -0.81875,0 -1.66879,0.18597 -2.55052,0.55732 -0.85024,0.43908 -1.55847,0.9964 -2.1255,1.67176 -0.56682,0.67556 -0.99976,1.50283 -1.298821,2.4824 -0.29926,0.97937 -0.44879,2.11084 -0.44879,3.39443 0,1.72226 0.33867,3.27579 1.015611,4.66057 0.67675,1.38479 1.72385,2.3808 3.14091,2.98902 z m -58.9454705,5.62331 -7.85237199,0 -1.98e-4,-25.99205 C -0.14032849,3.1638936 9.9724125,1.3002136 12.96914,10.495414 c 0.619903,1.36458 2.270074,4.11138 3.431254,6.69359 4.858219,10.80338 8.515054,-7.3206305 10.041046,-11.1018504 2.515064,-8.1065 12.944293,-7.48739 12.944095,0.17825 l 0,30.4308104 -7.54856,0 0.60802,-27.2500805 C 30.305437,15.014384 27.191067,29.104654 19.551601,28.962454 13.800563,28.855504 9.6836525,17.929324 7.0432205,13.489374 z M 86.764167,15.928394 c -1.63809,0 -1.29288,0 -2.93097,0 -3.13121,10e-4 -2.92246,-5.21572 1.9e-4,-5.3191 l 2.93078,0 c 0,-3.2421204 0,-3.0823004 0,-6.3246204 0.01,-4.43023998 6.36421,-4.43023998 6.56186,0 l 2e-4,6.3246204 c 2.51586,0 3.11516,0 5.63142,0 2.932563,-0.10002 2.928593,5.11194 0,5.3191 l -5.63142,0 -2e-4,10.17972 c 0,1.58719 0.26163,2.76937 0.78528,3.54633 0.78528,1.16554 1.87793,1.47054 3.17577,1.5969 2.22254,0.23806 2.2568,5.4318 0,5.44487 -3.10328,0 -6.10377,0.28381 -8.44574,-2.22928 -1.38438,-1.4858 -2.07717,-3.51227 -2.07717,-6.07884 z M 48.58783,4.4629236 c 2.024291,0 3.675056,1.65097 3.675056,3.67527 1.98e-4,2.0246904 -1.650765,3.6754604 -3.675056,3.6754604 -2.024291,0 -3.675254,-1.65077 -3.675452,-3.6754604 0,-2.0243 1.650963,-3.67527 3.675452,-3.67527 z M 45.300164,17.779204 c -0.156263,-3.72597 6.379854,-3.76241 6.575332,0 0,6.37017 -1.98e-4,12.41236 -1.98e-4,18.78253 l -6.575134,0 c 0,-6.37017 0,-12.41236 0,-18.78253 z" Fill="#FF005CA1" />
+
+
+                    </Viewbox>
+
+
+                </StackPanel>
+            </Viewbox>
+            <Border Background="#FFF9F9F9" Padding="5" VerticalAlignment="Top" DockPanel.Dock="Top">
+                <StackPanel x:Name="InfosPrincipais">
+                    <DockPanel x:Name="PrimeiraLinha">
+                        <TextBlock Text="{Binding CPF}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0" HorizontalAlignment="Right" DockPanel.Dock="Right"/>
+                        <TextBlock Text="CPF:" VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0" HorizontalAlignment="Right" DockPanel.Dock="Right"/>
+                        <TextBlock Text="Nome:" VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="CampoNome" Text="{Binding Nome}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0" TextTrimming="CharacterEllipsis" HorizontalAlignment="Left"/>
+                    </DockPanel>
+                    <StackPanel x:Name="Medico" Orientation="Horizontal">
+                        <TextBlock Text="Avaliador: " VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0"/>
+                        <TextBlock Text="{Binding Medico}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Data" Orientation="Horizontal">
+                        <TextBlock Text="{Binding DataExame}" VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0"/>
+                        <TextBlock Text="{Binding Data}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <UniformGrid Rows="2" Columns="2">
+                <StackPanel Orientation="Horizontal" d:LayoutOverrides="Height" VerticalAlignment="Bottom" Margin="5" HorizontalAlignment="Left">
+                    <TextBlock Text="Idade: " VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0"/>
+                    <TextBlock Text="{Binding Idade}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" d:LayoutOverrides="Height" VerticalAlignment="Bottom" Margin="5" HorizontalAlignment="Left">
+                    <TextBlock Text="Peso: " VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0"/>
+                    <TextBlock Text="{Binding Peso}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" d:LayoutOverrides="Height" VerticalAlignment="Bottom" Margin="5" HorizontalAlignment="Left">
+                    <TextBlock Text="Altura: " VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0"/>
+                    <TextBlock Text="{Binding Altura}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" d:LayoutOverrides="Height" VerticalAlignment="Bottom" Margin="5" HorizontalAlignment="Left">
+                    <TextBlock Text="Gênero" VerticalAlignment="Bottom" FontFamily="Arial" Padding="0" Margin="0,0,8,0"/>
+                    <TextBlock Text="{Binding Genero}" VerticalAlignment="Bottom" FontFamily="Courier New" Padding="0" Margin="0,0,8,0"/>
+                </StackPanel>
+
+            </UniformGrid>
+        </DockPanel>
+    </Border>
+</UserControl>

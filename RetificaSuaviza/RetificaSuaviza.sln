@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetificaSuaviza", "RetificaSuaviza\RetificaSuaviza.csproj", "{EFEC2D64-76D3-4945-84CA-6DE9714FFCE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.DSP", "E:\00 GIT\MiotecGit\BioSinais.DSP\BioSinais.DSP.csproj", "{DCF165F7-C787-4B19-95B2-F643A723EF90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.ExameService", "E:\00 GIT\MiotecGit\BioSinais.ExameService\BioSinais.ExameService.csproj", "{B31A3034-5B34-4A67-9C39-94984D58C632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.ModeloDomínio", "E:\00 GIT\MiotecGit\BioSinais.ModeloDomínio\BioSinais.ModeloDomínio.csproj", "{B8D9A494-0A91-493F-830E-76072A54CF24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFEC2D64-76D3-4945-84CA-6DE9714FFCE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEC2D64-76D3-4945-84CA-6DE9714FFCE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEC2D64-76D3-4945-84CA-6DE9714FFCE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEC2D64-76D3-4945-84CA-6DE9714FFCE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF165F7-C787-4B19-95B2-F643A723EF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B31A3034-5B34-4A67-9C39-94984D58C632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B31A3034-5B34-4A67-9C39-94984D58C632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B31A3034-5B34-4A67-9C39-94984D58C632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B31A3034-5B34-4A67-9C39-94984D58C632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

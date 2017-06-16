@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e885b13b-7f19-4832-9adf-6ef4205a8d98" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="e6b4c254-886d-4d3c-98e8-ae83149de1ee" name="TelaColeta&#xD;&#xA;">
+      <references>
+        <reference Id="0432f9ab-3a66-43ea-9ba0-953b5e5747db" name="IntegracaoColetaVVM">
+          <ArtifactNode Label="IntegracaoColetaVVM" Category="CodeSchema_Namespace" Id="(Namespace=IntegracaoColetaVVM)" />
+          <ExpandedNode Id="(Assembly=IntegracaoColetaVVM)" Label="IntegracaoColetaVVM.exe" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Dsl.NamespaceUsedInAssembly" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Namespace=IntegracaoColetaVVM)" Label="IntegracaoColetaVVM" Category="CodeSchema_Namespace">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

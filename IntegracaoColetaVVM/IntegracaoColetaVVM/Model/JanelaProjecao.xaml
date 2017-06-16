@@ -1,0 +1,19 @@
+﻿<Window x:Class="IntegracaoColetaVVM.Model.JanelaProjecao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:IntegracaoColetaVVM.InfraEstrutura"
+        WindowStyle="None"
+        Width="100"
+        Height="100"
+        WindowStartupLocation="CenterScreen"        
+        Title="JanelaProjecao">
+    
+    <Window.Resources>
+        <i:BitmapToSource x:Key="BitmapToSource" />
+    </Window.Resources>    
+    
+    <Grid>
+        <Image Source="{Binding ImagemProjecao}" Width="800" Height="600" />
+    </Grid>
+    
+</Window>

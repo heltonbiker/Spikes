@@ -1,0 +1,9 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TesteMarcadoresView" x:Class="TesteMarcadoresView.MainWindow"
+        Title="MainWindow"  WindowStartupLocation="CenterScreen">
+	<Border Background="#FF146395" VerticalAlignment="Center" Padding="40" HorizontalAlignment="Center">
+		<local:MarcadoresView/>
+	</Border>
+</Window>

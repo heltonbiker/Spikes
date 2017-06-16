@@ -1,0 +1,13 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="DoisRelatorios.MainWindow"
+	x:Name="Window"
+	Title="MainWindow"
+	Width="934" Height="662">
+
+	<DockPanel>
+		<Grid Width="400" DockPanel.Dock="Left" HorizontalAlignment="Left" />
+		<DocumentViewer Document="{Binding Documento}"/>
+	</DockPanel>
+</Window>

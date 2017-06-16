@@ -1,0 +1,19 @@
+﻿<Window x:Class="RenderingEventDemo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="300" Width="300"
+    >
+  <Canvas>
+    <!-- the format of Tag should be "element_to_follow;element_to_avoid" -->
+    <Rectangle Fill="Red" Stroke="Black" StrokeThickness="3" Width="20" Height="20" 
+               Name="Square" Canvas.Left="63" Canvas.Top="26" Tag="Rectangle;Squircle"/>
+    <Rectangle Fill="Pink" Stroke="Black" StrokeThickness="3" Width="40" Height="20" 
+               Name="Rectangle" Canvas.Left="218" Canvas.Top="169" Tag="Circle;Square"/>
+    <Ellipse   Fill="Green" Stroke="Black" StrokeThickness="3" Width="20" Height="20" 
+               Name="Circle" Canvas.Left="0" Canvas.Top="0" Tag="Ellipse;Rectangle"/>
+    <Ellipse   Fill="LightGreen" Stroke="Black" StrokeThickness="3" Width="40" Height="20" 
+               Name="Ellipse" Canvas.Left="0" Canvas.Top="200" Tag="Squircle;Circle"/>
+    <Rectangle Fill="Blue" Stroke="Black" StrokeThickness="3" Width="20" Height="20" RadiusX="7" RadiusY="7" 
+               Name="Squircle" Canvas.Left="30" Canvas.Top="80" Tag="Square;Rectangle"/>
+  </Canvas>
+</Window>

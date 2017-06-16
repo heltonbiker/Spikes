@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalibraMiotoolsDemo", "CalibraMiotoolsDemo.csproj", "{C59FF2D8-B2B0-4509-898A-70DAE785CF90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.ModeloDomínio", "..\..\..\..\00 GIT\MiotecGit\BioSinais.ModeloDomínio\BioSinais.ModeloDomínio.csproj", "{B8D9A494-0A91-493F-830E-76072A54CF24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.Hardware.NewMiotool", "..\..\..\..\00 GIT\MiotecGit\BioSinais.Hardware.NewMiotool\BioSinais.Hardware.NewMiotool.csproj", "{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioSinais.Hardware.MiotoolUSB", "..\..\..\..\00 GIT\MiotecGit\BioSinais.Hardware.MiotoolUSB\BioSinais.Hardware.MiotoolUSB.csproj", "{D26A0990-E007-4E29-9FF9-202FC23FA6EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Debug|x86.Build.0 = Debug|Any CPU
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Release|x86.ActiveCfg = Release|Any CPU
+		{C59FF2D8-B2B0-4509-898A-70DAE785CF90}.Release|x86.Build.0 = Release|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Debug|x86.Build.0 = Debug|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Release|x86.ActiveCfg = Release|Any CPU
+		{B8D9A494-0A91-493F-830E-76072A54CF24}.Release|x86.Build.0 = Release|Any CPU
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Debug|x86.ActiveCfg = Debug|x86
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Debug|x86.Build.0 = Debug|x86
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Release|x86.ActiveCfg = Release|x86
+		{AC39847E-9BE6-4244-BAF2-E1F0E7685EA2}.Release|x86.Build.0 = Release|x86
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{D26A0990-E007-4E29-9FF9-202FC23FA6EA}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,61 @@
+﻿<Window x:Class="AcessoCameraGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:ac="clr-namespace:AcessoCameraGUI"
+        Title="MainWindow" Height="350" Width="525" Background="#FF290404">
+	
+	<Window.DataContext>
+		<ac:ViewModel/>
+	</Window.DataContext>
+	
+	
+	<Window.Resources>
+		<ac:BitmapToSource x:Key="BitmapToSource"/>		
+	</Window.Resources>
+	
+    <Grid>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="0.804*"/>
+    		<RowDefinition Height="0.196*"/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="*"/>
+    		<ColumnDefinition Width="*"/>
+    		<ColumnDefinition Width="*"/>
+    	</Grid.ColumnDefinitions>
+    	
+		<Button Content="Capturar"  Margin="28,17.152,36.101,17" Grid.Row="1" Command="{Binding ComandoCapturarFrame, Mode=OneWay}"/>
+    	<Button Content="Confirmar" Command="{Binding ComandoConfirmarCaptura}" Grid.Column="1" Margin="40.899,17.152,55.791,17" Grid.Row="1"/>
+    	<Button Content="Cancelar" Command="{Binding ComandoCancelarCaptura}" Grid.Column="2" Margin="21.209,17.152,29,17" Grid.Row="1"/>
+    	
+		<Border Background="White"> 
+    		<Viewbox> 
+				<Image Source="{Binding FrameCamera, Converter={StaticResource BitmapToSource}}">
+					<Image.LayoutTransform>
+							<RotateTransform Angle="-90"/>
+					</Image.LayoutTransform>
+				</Image>
+			</Viewbox>
+    	</Border>    	
+		<Border Background="White" Grid.Column="1">
+    		<Viewbox>
+				<Image Source="{Binding ImagemBranca, Converter={StaticResource BitmapToSource}}">
+					<Image.LayoutTransform>
+							<RotateTransform Angle="-90"/>
+					</Image.LayoutTransform>
+				</Image>
+			</Viewbox>
+    	</Border>
+    	<Border Background="White" Grid.Column="2">
+    		<Viewbox>
+    			<Image Source="{Binding ImagemFranja, Converter={StaticResource BitmapToSource}}">
+    				<Image.LayoutTransform>
+							<RotateTransform Angle="-90"/>
+					</Image.LayoutTransform>			
+				</Image>
+    		</Viewbox>
+    	</Border>
+		
+        
+    </Grid>
+</Window>

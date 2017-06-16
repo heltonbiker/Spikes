@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StretchableGeometries", "StretchableGeometries.csproj", "{BB02D511-08FB-437A-B602-D76E62EA413F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miotec.ModeloDomínio", "..\..\00 GIT\AplicativosDesktopGit\Miotec.ModeloDomínio\Miotec.ModeloDomínio.csproj", "{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB02D511-08FB-437A-B602-D76E62EA413F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB02D511-08FB-437A-B602-D76E62EA413F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB02D511-08FB-437A-B602-D76E62EA413F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB02D511-08FB-437A-B602-D76E62EA413F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BD7468-C426-4B1A-8FA0-50689F3BFDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

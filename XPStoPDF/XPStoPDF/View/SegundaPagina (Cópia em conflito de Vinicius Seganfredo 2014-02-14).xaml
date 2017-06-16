@@ -1,0 +1,28 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="XPStoPDF.SegundaPagina"
+	x:Name="UserControl"
+	d:DesignWidth="793.7"
+	d:DesignHeight="1122.5" Background="#FFEFE3E3">
+
+	<Grid x:Name="LayoutRoot">
+		<DataGrid Margin="75,75,75,650" ItemsSource="{Binding ListaTuple}" AutoGenerateColumns="false" FontFamily="Courier new">
+			<DataGrid.Columns>
+				<DataGridTextColumn Binding="{Binding Item1}" Width="*"/>
+				<DataGridTextColumn Binding="{Binding Item2}" Width="*"/>
+				<DataGridTextColumn Binding="{Binding Item3}" Width="*"/>
+				<DataGridTextColumn Binding="{Binding Item4}" Width="*"/>
+				<DataGridTextColumn Binding="{Binding Item5}" Width="*"/>
+				<DataGridTextColumn Binding="{Binding Item6}" Width="*"/>
+			</DataGrid.Columns>
+			
+		
+			
+			
+		</DataGrid>
+	</Grid>
+</UserControl>
