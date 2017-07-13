@@ -33,9 +33,9 @@ namespace HelloAforgeDeviceCapabilities
 
 			//tester.RunDirectShow();
 
-			//tester.RunEMGU();
+			tester.RunEMGU();
 
-			tester.RunExpressionEncoder();
+			//tester.RunExpressionEncoder();
 
 			Console.ReadKey();
 		}
@@ -140,9 +140,9 @@ namespace HelloAforgeDeviceCapabilities
 		private void Camera_ImageGrabbed(object sender, EventArgs e)
 		{
 			var camera = sender as Capture;
-			var foo = OutputArray.GetEmpty();
-			var retrieved = camera.Retrieve(foo as IOutputArray);
-			Console.WriteLine((foo as IOutputArray).GetOutputArray().GetSize());
+			//var foo = OutputArray.GetEmpty();
+			//var retrieved = camera.Retrieve(foo as IOutputArray);
+			//Console.WriteLine((foo as IOutputArray).GetOutputArray().GetSize());
 		}
 
 		private void SaveFrame(Timestamped<EventPattern<NewFrameEventArgs>> args)
