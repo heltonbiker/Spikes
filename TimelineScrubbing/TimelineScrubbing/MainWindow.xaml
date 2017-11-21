@@ -6,11 +6,12 @@
 		xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:TimelineScrubbing"
         mc:Ignorable="d"
-        Title="MainWindow" >
+        Title="MainWindow"
+		Foreground="White">
 
 	<Window.InputBindings>
-		<KeyBinding Key="Right" Command="{Binding ComandoFrameDireito}"/>
-		<KeyBinding Key="Left" Command="{Binding ComandoFrameEsquerdo}"/>
+		<KeyBinding Key="Right" Command="{Binding ComandoNext}"/>
+		<KeyBinding Key="Left" Command="{Binding ComandoPrevious}"/>
 		<KeyBinding Key="Space" Command="{Binding ComandoPlayPause}"/>
 	</Window.InputBindings>
 
@@ -19,43 +20,98 @@
 	</Window.Resources>
 
 
-	<DockPanel>
-		<Track x:Name="track" Minimum="0" Maximum="1" Value="{Binding Posição, Mode=TwoWay}"/>
+	<DockPanel Background="#222">
+		<Track x:Name="track" Minimum="0" Maximum="1" Value="{Binding Position, Mode=TwoWay}"/>
 
 		<DockPanel x:Name="MediaControls" DockPanel.Dock="Bottom">
 			<UniformGrid Rows="1" HorizontalAlignment="Center">
 				<UniformGrid.Resources>
 					<Style TargetType="Button">
 						<Setter Property="MinWidth" Value="50"/>
-						<Setter Property="Margin" Value="5"/>
+						<Setter Property="Margin" Value="2.5 5"/>
+						<Setter Property="Height" Value="26"/>
+						<Setter Property="Padding" Value="5"/>
 					</Style>
+					<Style TargetType="{x:Type Path}">
+						<Setter Property="Fill" Value="Black"/>
+						<Setter Property="Stretch" Value="Uniform"/>
+						<Setter Property="StrokeThickness" Value="0"/>
+					</Style>
+					
+					<PathGeometry x:Key="PlayGeometry" Figures="M 0,1 2.5,0 0,-1 z"/>
+					<RectangleGeometry x:Key="BaraVertical" Rect="0 0 1 5"/>
+					<System:Double x:Key="LarguraEspaçamento">2</System:Double>
+					<ScaleTransform x:Key="InversãoTransform" ScaleX="-1"/>
 				</UniformGrid.Resources>
-				<Button Content="|&lt;" Command="{Binding ComandoFrameEsquerdo}"/>
-				<Button Command="{Binding ComandoPlayPause}">
-					<Button.Style>
-						<Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-							<Setter Property="Content" Value=">"/>
-							<Style.Triggers>
-								<DataTrigger Binding="{Binding Playing}" Value="true">
-									<Setter Property="Content" Value="||"/>
-								</DataTrigger>
-							</Style.Triggers>
-						</Style>
-					</Button.Style>
+
+				<Button Command="{Binding ComandoPrevious}">
+					<DockPanel LayoutTransform="{StaticResource InversãoTransform}">
+						<Path Data="{StaticResource PlayGeometry}"/>
+						<Path Data="{StaticResource BaraVertical}"/>
+					</DockPanel>
 				</Button>
-				<Button Content=">|" Command="{Binding ComandoFrameDireito}"/>
-				<Button Content="#" Command="{Binding ComandoStop}"/>
+				<Button Command="{Binding ComandoReverseSuperSlow}">
+					<DockPanel LayoutTransform="{StaticResource InversãoTransform}">
+						<Path Data="{StaticResource BaraVertical}"/>
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource BaraVertical}"/>
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource PlayGeometry}"/>
+					</DockPanel>
+				</Button>
+				<Button Command="{Binding ComandoReverseSlow}">
+					<DockPanel LayoutTransform="{StaticResource InversãoTransform}">
+						<Path Data="{StaticResource BaraVertical}"/>
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource PlayGeometry}"/>
+					</DockPanel>
+				</Button>
+				<Button Command="{Binding ComandoReverse}">
+					<DockPanel LayoutTransform="{StaticResource InversãoTransform}">
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource PlayGeometry}"/>
+					</DockPanel>
+				</Button>
+				<Button Command="{Binding ComandoStop}">
+					<Path Data="M 0,0 1,0 1,1 0,1 z"/>
+				</Button>
+				<Button Command="{Binding ComandoPlay}">
+					<DockPanel>
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource PlayGeometry}"/>
+					</DockPanel>
+				</Button>
+				<Button Command="{Binding ComandoPlaySlow}">
+					<DockPanel>
+						<Path Data="{StaticResource BaraVertical}"/>
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource PlayGeometry}"/>
+					</DockPanel>
+				</Button>
+				<Button Command="{Binding ComandoPlaySuperSlow}">
+					<DockPanel>
+						<Path Data="{StaticResource BaraVertical}"/>
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource BaraVertical}"/>
+						<Rectangle Width="{StaticResource LarguraEspaçamento}"/>
+						<Path Data="{StaticResource PlayGeometry}"/>
+					</DockPanel>
+				</Button>
+				<Button Command="{Binding ComandoNext}">
+					<DockPanel>
+						<Path Data="{StaticResource PlayGeometry}"/>
+						<Path Data="{StaticResource BaraVertical}"/>
+					</DockPanel>
+				</Button>
 			</UniformGrid>
 		</DockPanel>
 		<DockPanel x:Name="timeline" DockPanel.Dock="Bottom">
-			<Label Content="{Binding Duração}" ContentStringFormat="{StaticResource segundosFormat}" DockPanel.Dock="Right"/>
-			<Slider Orientation="Horizontal" Minimum="0" Maximum="1" SmallChange="0.01" LargeChange="0.1" Value="{Binding Posição}"/>
+			<TextBlock Text="{Binding Duração, StringFormat={StaticResource segundosFormat}}" DockPanel.Dock="Right"/>
+			<local:ScrubSlider/>
 		</DockPanel>
-		<!--
-		<TextBox x:Name="mensagemTextBox" Text="{Binding Mensagens, Mode=OneWay}" IsReadOnly="True" DockPanel.Dock="Top" Height="300" TextWrapping="Wrap"/>
-		
-		<UniformGrid Rows="1">
-			<UniformGrid.Resources>
+
+		<Grid>
+			<Grid.Resources>
 				<Style TargetType="StackPanel">
 					<Setter Property="HorizontalAlignment" Value="Center"/>
 					<Setter Property="VerticalAlignment" Value="Center"/>
@@ -64,16 +120,12 @@
 					<Setter Property="FontSize" Value="20"/>
 					<Setter Property="HorizontalAlignment" Value="Center"/>
 				</Style>
-			</UniformGrid.Resources>
+			</Grid.Resources>
 			<StackPanel>
-				<Label Content="Posição Relativa:"/>
-				<TextBlock Text="{Binding Value, ElementName=track, StringFormat=N3}"/>
+				<TextBlock Text="Tempo:"/>
+				<TextBlock Text="{Binding Position, StringFormat={}{0:N2} s}" FontSize="40"/>
 			</StackPanel>
-			<StackPanel>
-				<Label Content="Tempo:"/>
-				<TextBlock Text="{Binding Tempo, StringFormat={}{0:N2} s}"/>
-			</StackPanel>
-		</UniformGrid>
-		-->
+		</Grid>
+
 	</DockPanel>
 </Window>
