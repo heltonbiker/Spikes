@@ -53,9 +53,9 @@ namespace HelloDataflow
 			createPoints.LinkTo(addPoints);
 		}
 
-		async Task<Point> geraPonto(Tuple<double, double> t)
+		Point geraPonto(Tuple<double, double> t)
 		{
-			await Task.Delay(1000);
+			//await Task.Delay(1000);
 			return new Point(t.Item1, t.Item2);
 		}
 

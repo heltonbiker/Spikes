@@ -1,0 +1,8 @@
+﻿<Application x:Class="DarPauEmWpfPraEventosWindows.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DarPauEmWpfPraEventosWindows">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

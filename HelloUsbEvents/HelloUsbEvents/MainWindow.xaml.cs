@@ -35,20 +35,20 @@ namespace HelloUsbEvents
 		/// </summary>
 		private IntPtr HwndHandler(IntPtr hwnd, int msg, IntPtr wparam, IntPtr lparam, ref bool handled)
 		{
-			Console.WriteLine($"{hwnd}; {msg:X}; {(long)wparam:X}; {lparam}");
+			//Console.WriteLine($"{hwnd}; {msg:X}; {(long)wparam:X}; {lparam}");
 
-			//if (msg == UsbNotification.WmDevicechange)
-			//{
-			//	switch ((int)wparam)
-			//	{
-			//		case UsbNotification.DbtDeviceremovecomplete:
-			//			Console.WriteLine("USB Device Removed"); //Usb_DeviceRemoved(); // this is where you do your magic
-			//			break;
-			//		case UsbNotification.DbtDevicearrival:
-			//			Console.WriteLine("USB Device Inserted"); //Usb_DeviceAdded(); // this is where you do your magic
-			//			break;
-			//	}
-			//}
+			if (msg == UsbNotification.WmDevicechange)
+			{
+				switch ((int)wparam)
+				{
+					case UsbNotification.DbtDeviceremovecomplete:
+						Console.WriteLine("USB Device Removed"); //Usb_DeviceRemoved(); // this is where you do your magic
+						break;
+					case UsbNotification.DbtDevicearrival:
+						Console.WriteLine("USB Device Inserted"); //Usb_DeviceAdded(); // this is where you do your magic
+						break;
+				}
+			}
 
 			handled = false;
 			return IntPtr.Zero;

@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43BB8CBA-F0AA-491F-AE67-3BBF44273A01}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DivisãoArrayBidimensional</RootNamespace>
-    <AssemblyName>DivisãoArrayBidimensional</AssemblyName>
+    <ProjectGuid>{0C23AB8B-44C8-41C5-9FD6-4D0255B7CB21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenMRS_Clone</RootNamespace>
+    <AssemblyName>OpenMRS_Clone</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,14 +41,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DivisorArray.cs" />
-    <Compile Include="DivisorArrayTests.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Encounters\Encounter.cs" />
+    <Compile Include="Encounters\EncounterProvider.cs" />
+    <Compile Include="Encounters\EncounterRole.cs" />
+    <Compile Include="Encounters\EncounterType.cs" />
+    <Compile Include="Patients\Patient.cs" />
+    <Compile Include="Patients\PatientIdentifier.cs" />
+    <Compile Include="Patients\PatientIdentifierType.cs" />
+    <Compile Include="Persons\PersonAddress.cs" />
+    <Compile Include="Persons\PersonAttribute.cs" />
+    <Compile Include="Persons\PersonName.cs" />
+    <Compile Include="Providers\Provider.cs" />
+    <Compile Include="Providers\ProviderAttribute.cs" />
+    <Compile Include="Providers\ProviderAttributeType.cs" />
+    <Compile Include="Relationships\Relationship.cs" />
+    <Compile Include="Relationships\RelationshipType.cs" />
+    <Compile Include="Users\Privilege.cs" />
+    <Compile Include="Users\Role.cs" />
+    <Compile Include="Users\User.cs" />
+    <Compile Include="Users\UserProperty.cs" />
+    <Compile Include="Visits\Visit.cs" />
+    <Compile Include="Visits\VisitAttribute.cs" />
+    <Compile Include="Visits\VisitAttributeType.cs" />
+    <Compile Include="Visits\VisitType.cs" />
+    <Compile Include="Persons\Person.cs" />
+    <Compile Include="Persons\PersonAttributeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

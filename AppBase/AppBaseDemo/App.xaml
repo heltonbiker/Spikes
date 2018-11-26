@@ -1,0 +1,12 @@
+﻿<appBase:ApplicationBase x:Class="AppBaseDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AppBaseDemo"
+             xmlns:appBase="clr-namespace:AppBase;assembly=AppBase">
+
+    <appBase:ApplicationBase.Resources>
+         
+    </appBase:ApplicationBase.Resources>
+
+</appBase:ApplicationBase>
+
