@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskInsteadOfDispatcher", "TaskInsteadOfDispatcher\TaskInsteadOfDispatcher.csproj", "{FEAE9B27-DC9B-4887-8977-3A816B5CACAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miotec.Framework", "..\..\..\00 GitLab\AplicativosDesktop\Miotec.Framework\Miotec.Framework.csproj", "{AC5C751F-804A-4E09-8179-20BEBCE2B405}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEAE9B27-DC9B-4887-8977-3A816B5CACAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAE9B27-DC9B-4887-8977-3A816B5CACAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAE9B27-DC9B-4887-8977-3A816B5CACAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAE9B27-DC9B-4887-8977-3A816B5CACAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC5C751F-804A-4E09-8179-20BEBCE2B405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC5C751F-804A-4E09-8179-20BEBCE2B405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC5C751F-804A-4E09-8179-20BEBCE2B405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC5C751F-804A-4E09-8179-20BEBCE2B405}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A13BD96-FD71-4F10-A8F7-A2DA74AC91E6}
+	EndGlobalSection
+EndGlobal

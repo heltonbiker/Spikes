@@ -1,0 +1,57 @@
+﻿<Window x:Class="MiotoolUsbExplorer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiotoolUsbExplorer"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <ContentControl Content="{Binding}">
+        <ContentControl.ContentTemplate>
+            <DataTemplate DataType="{x:Type local:MainViewModel}">
+                <DockPanel LastChildFill="False">
+                    <GroupBox Header="Nomes Porta">
+                        <StackPanel>
+                            <Button Content="Listar Nomes" Command="{Binding ComandoListarPortas}"/>
+                            <ListView ItemsSource="{Binding NomesPorta}"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Possíveis Miotools">
+                        <StackPanel>
+                            <Button Content="Testar Portas" Command="{Binding ComandoTestarPortas}"/>
+                            <ListView ItemsSource="{Binding Miotools}" DisplayMemberPath="PortName"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Miotool Ativo">
+                        <StackPanel>
+                            <Button Content="Carregar Dados" Command="{Binding ComandoCarregarDados}"/>
+                            <TextBlock Text="{Binding SerialNumber}"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Sinais">
+                        <DockPanel>
+                            <Button DockPanel.Dock="Top" Content="Iniciar Captura" Command="{Binding ComandoIniciarCaptura}"/>
+                            <Button DockPanel.Dock="Top" Content="Parar Captura" Command="{Binding ComandoPararCaptura}"/>
+                            <UniformGrid Rows="1">
+                                <UniformGrid.Resources>
+                                    <Style TargetType="ProgressBar">
+                                        <Setter Property="Orientation" Value="Vertical"/>
+                                        <Setter Property="Maximum" Value="32768"/>
+                                        <Setter Property="Minimum" Value="-32768"/>
+                                    </Style>
+                                </UniformGrid.Resources>
+                                <ProgressBar Value="{Binding Valores[0]}"/>
+                                <ProgressBar Value="{Binding Valores[1]}"/>
+                                <ProgressBar Value="{Binding Valores[2]}"/>
+                                <ProgressBar Value="{Binding Valores[3]}"/>
+                            </UniformGrid>
+                        </DockPanel>
+                    </GroupBox>
+
+                </DockPanel>
+            </DataTemplate>
+        </ContentControl.ContentTemplate>
+    </ContentControl>
+</Window>
